@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
+    android:padding="16dp"
     android:background="@color/colorBackground">
 
     <EditText
@@ -19,8 +20,8 @@
         android:hint="@string/input_email"
         android:textColorHint="@color/colorHintText"
         android:textCursorDrawable="@color/colorCursorText"
-        android:gravity="left"
-        android:paddingLeft="13sp"/>
+        android:gravity="start"
+        android:paddingLeft="16sp"/>
 
     <EditText
         android:id="@+id/password"
@@ -34,8 +35,8 @@
         android:textColorHint="@color/colorHintText"
         android:textCursorDrawable="@color/colorCursorText"
         android:layout_gravity="left"
-        android:paddingLeft="10sp"
-        android:gravity="left"/>
+        android:paddingLeft="16sp"
+        android:gravity="start"/>
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -50,7 +51,7 @@
         android:text="@string/sign_in"
         android:textColor="@color/colorButtonsText"
         android:textSize="18sp"
-        android:layout_gravity="left"/>
+        android:layout_gravity="start"/>
 
     <Button
         android:id="@+id/buttonSU"
@@ -63,7 +64,7 @@
         android:text="@string/sign_up"
         android:textColor="@color/colorButtonsText"
         android:textSize="18sp"
-        android:layout_gravity="left"/>
+        android:layout_gravity="start"/>
 </LinearLayout>
 
 </LinearLayout>
