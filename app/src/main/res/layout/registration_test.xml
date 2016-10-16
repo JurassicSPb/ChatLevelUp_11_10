@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/colorBackground">
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:textSize="30sp"
+        android:textColor="@color/colorMainText"
+        android:hint="@string/input_email"
+        android:textColorHint="@color/colorHintText"
+        android:textCursorDrawable="@color/colorCursorText"
+        android:gravity="left"
+        android:paddingLeft="10sp"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:textSize="30sp"
+        android:textColor="@color/colorMainText"
+        android:hint="@string/input_password"
+        android:textColorHint="@color/colorHintText"
+        android:textCursorDrawable="@color/colorCursorText"
+        android:layout_gravity="left"
+        android:paddingLeft="10sp"
+        android:gravity="left"/>
+    <EditText
+        android:id="@+id/repeat_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:textSize="30sp"
+        android:textColor="@color/colorMainText"
+        android:hint="@string/repeat_password"
+        android:textColorHint="@color/colorHintText"
+        android:textCursorDrawable="@color/colorCursorText"
+        android:layout_gravity="left"
+        android:paddingLeft="10sp"
+        android:gravity="left"/>
+
+
+
+    <Button
+        android:id="@+id/buttonSI"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:background="@color/colorButtons"
+        android:text="@string/sign_in"
+        android:textColor="@color/colorButtonsText"
+        android:textSize="22sp"
+        android:layout_gravity="left"/>
+
+    <Button
+        android:id="@+id/buttonSU"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="12dp"
+        android:background="@color/colorButtons"
+        android:text="@string/sign_up"
+        android:textColor="@color/colorButtonsText"
+        android:textSize="22sp"
+        android:layout_gravity="left"/>
+
+
+</LinearLayout>

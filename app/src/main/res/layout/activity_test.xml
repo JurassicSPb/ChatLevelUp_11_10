@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/test_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"/>
+    <Button
+        android:id="@+id/test_button"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorAccent"
+        android:text="@string/test_button"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:layout_gravity="center_horizontal|bottom"/>
+
+
+</FrameLayout>
