@@ -13,7 +13,7 @@ import android.widget.Toast;
  * Created by Мария on 15.10.2016.
  */
 
-public class RegisterActivity extends AppCompatActivity{
+public class RegisterActivity extends AppCompatActivity {
     private Button buttonSI;
     private Button buttonSU;
     private EditText editEmail;
@@ -38,24 +38,23 @@ public class RegisterActivity extends AppCompatActivity{
             }
         });
     }
-            private void onButtonSUClicked(){
-            if (editEmail.getText().length()==0 || editPassword.getText().length()==0 || repeatPassword.getText().length()==0) {
-                ToastResult(R.string.register_failed1);
-            }
-            else if (!(editPassword.getText().toString().equals(repeatPassword.getText().toString()))){
-                ToastResult(R.string.register_failed3);
 
-            }
-            else if (editPassword.getText().length() <8 || repeatPassword.getText().length()<8){
-                ToastResult(R.string.register_failed2);
-                }
-            else {
-                ToastResult(R.string.register_success);
-            }
+    private void onButtonSUClicked() {
+        if (editEmail.getText().length() == 0 || editPassword.getText().length() == 0 || repeatPassword.getText().length() == 0) {
+            ToastResult(R.string.register_failed1);
+        } else if (!(editPassword.getText().toString().equals(repeatPassword.getText().toString()))) {
+            ToastResult(R.string.register_failed3);
+
+        } else if (editPassword.getText().length() < 8 || repeatPassword.getText().length() < 8) {
+            ToastResult(R.string.register_failed2);
+        } else {
+            ToastResult(R.string.register_success);
+        }
 
     }
-    private void ToastResult(int result){
-        Toast toast = Toast.makeText(this,result, Toast.LENGTH_SHORT);
+
+    private void ToastResult(int result) {
+        Toast toast = Toast.makeText(this, result, Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
     }

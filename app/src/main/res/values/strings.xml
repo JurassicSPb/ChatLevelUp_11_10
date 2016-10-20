@@ -6,9 +6,11 @@
     <string name="password">Password</string>
     <string name="sign_in">Sign IN</string>
     <string name="sign_up">Sign UP</string>
+    <string name="logout">Logout</string>
     <string name="input_email">Input Email</string>
     <string name="input_password">Input Password</string>
     <string name="repeat_password">Repeat Password</string>
+    <string name="add_info">Add info about yourself</string>
     <string name="login_success">Login successful</string>
     <string name="login_failed">Login failed</string>
     <string name="register_success">Register successful</string>

@@ -35,7 +35,7 @@
         android:textColorHint="@color/colorHintText"
         android:textCursorDrawable="@color/colorCursorText"
         android:layout_gravity="left"
-        android:paddingLeft="16sp"
+        android:paddingLeft="16dp"
         android:gravity="start"/>
 
 <LinearLayout
