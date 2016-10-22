@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ChatLevelUp_11_10</string>
+    <string name="app_name">SimpleChat</string>
     <string name="test_button">Button</string>
     <string name="counter">Счетчик</string>
     <string name="email">Email</string>
@@ -13,7 +13,7 @@
     <string name="add_info">Add info about yourself</string>
     <string name="login_success">Login successful</string>
     <string name="login_failed">Login failed</string>
-    <string name="register_success">Register successful</string>
+    <string name="register_success">Registration successful</string>
     <string name="register_failed1">Fill in all fields</string>
     <string name="register_failed2">Password must be at least 8 characters</string>
     <string name="register_failed3">Passwords are not equal</string>

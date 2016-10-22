@@ -31,7 +31,7 @@
         android:textColor="@color/colorButtonsText"
         android:textSize="18sp"
         android:layout_gravity="start"
-        android:layout_below="@+id/profile_photo" />
+        android:layout_below="@+id/color_bottom" />
 
     <ImageView
         android:id="@+id/profile_photo"
@@ -43,18 +43,10 @@
         android:layout_below="@+id/color_top"/>
 
     <TextView
-        android:id="@+id/color_bottom"
-        android:layout_width="fill_parent"
-        android:layout_height="60dp"
-        android:background="@color/colorPrimary"
-        android:layout_below="@+id/profile_photo"
-        android:layout_toRightOf="@+id/logout"/>
-
-    <TextView
         android:id="@+id/color_top"
         android:layout_width="fill_parent"
-        android:layout_height="60dp"
-        android:textColor="@color/colorMainText"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorButtons"
         android:text="Your Name"
         android:textSize="26sp"
         android:paddingLeft="16sp"
@@ -62,6 +54,15 @@
         android:textStyle="italic"
         android:background="@color/colorPrimary"
         android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/color_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="32dp"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/profile_photo"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 

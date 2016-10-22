@@ -1,5 +1,6 @@
 package com.github.jurassicspb.chatlevelup_11_10;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -49,6 +50,9 @@ public class RegisterActivity extends AppCompatActivity {
             ToastResult(R.string.register_failed2);
         } else {
             ToastResult(R.string.register_success);
+            Intent intent = new Intent(this, ProfileActivity.class);
+            intent.putExtra("key_extra", "value");
+            startActivity(intent);
         }
 
     }

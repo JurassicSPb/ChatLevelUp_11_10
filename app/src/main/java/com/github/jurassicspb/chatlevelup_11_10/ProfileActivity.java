@@ -1,8 +1,10 @@
 package com.github.jurassicspb.chatlevelup_11_10;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,6 +32,10 @@ public class ProfileActivity extends AppCompatActivity{
         colorTop = (TextView) findViewById(R.id.color_top);
         colorRight = (EditText) findViewById(R.id.color_right);
         colorBottom = (TextView) findViewById(R.id.color_bottom);
+        Intent i = getIntent();
+//        String arg  = i.getStringExtra("key_extra");
+//        Log.d(RegisterActivity.class.getSimpleName(), arg);
+
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
