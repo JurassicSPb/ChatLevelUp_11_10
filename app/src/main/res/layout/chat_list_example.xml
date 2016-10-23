@@ -8,7 +8,7 @@
     android:background="@android:color/white">
 
     <ImageView
-        android:id="@+id/avatar"
+        android:id="@+id/chat_avatar"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginRight="16dp"
@@ -29,13 +29,13 @@
         android:layout_below="@+id/title"
         tools:text="Last Message"/>
     <TextView
-        android:id="@+id/firstLetter"
+        android:id="@+id/chat_firstLetter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/avatar"
-        android:layout_alignTop="@+id/avatar"
-        android:layout_alignRight="@+id/avatar"
-        android:layout_alignBottom="@+id/avatar"
+        android:layout_alignLeft="@+id/chat_avatar"
+        android:layout_alignTop="@+id/chat_avatar"
+        android:layout_alignRight="@+id/chat_avatar"
+        android:layout_alignBottom="@+id/chat_avatar"
         android:textSize="18sp"
         android:gravity="center"
         tools:text="U"
@@ -63,7 +63,7 @@
         android:textSize="24sp"
         tools:text="Title"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/avatar"
-        android:layout_toEndOf="@+id/avatar" />
+        android:layout_toRightOf="@+id/chat_avatar"
+        android:layout_toEndOf="@+id/chat_avatar" />
 
 </RelativeLayout>

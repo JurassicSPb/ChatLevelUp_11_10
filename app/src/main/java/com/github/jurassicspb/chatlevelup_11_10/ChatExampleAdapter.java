@@ -36,27 +36,29 @@ public class ChatExampleAdapter extends RecyclerView.Adapter<ChatExampleAdapter.
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        ImageView avatar;
+        ImageView chat_avatar;
         TextView title;
         TextView last_message;
         TextView updated;
-        TextView firstLetter;
+        TextView chat_firstLetter;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            avatar = (ImageView) itemView.findViewById(R.id.avatar);
+            chat_avatar = (ImageView) itemView.findViewById(R.id.chat_avatar);
             title = (TextView) itemView.findViewById(R.id.title);
             last_message = (TextView) itemView.findViewById(R.id.last_message);
             updated = (TextView) itemView.findViewById(R.id.updated);
-            firstLetter = (TextView) itemView.findViewById(R.id.firstLetter);
+            chat_firstLetter = (TextView) itemView.findViewById(R.id.chat_firstLetter);
             itemView.setOnClickListener(this);
         }
 
         public void bind(Chat chat) {
-            avatar.setImageResource(R.drawable.circle);
+            chat_avatar.setImageResource(R.drawable.circle);
             title.setText(chat.getTitle());
             last_message.setText(chat.getLastMessage());
             updated.setText(DateUtil.fromTs(chat.getUpdated()));
+            chat_firstLetter.setText(chat.getFirstLetter());
+
         }
 
         @Override

@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class ChatExampleActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
@@ -58,8 +59,7 @@ public class ChatExampleActivity extends AppCompatActivity {
             @Override
             public void run() {
                 while (visible) {
-                    chats.add(new Chat(("Title " + chats.size()), "Last Message", DateUtil.now()));
-
+                    chats.add(new Chat(("Title " + chats.size()), "Last Message"));
                     handler.post(new Runnable() {
                         @Override
                         public void run() {

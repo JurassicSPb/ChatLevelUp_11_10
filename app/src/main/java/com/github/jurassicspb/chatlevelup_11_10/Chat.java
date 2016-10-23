@@ -15,8 +15,9 @@ public class Chat{
     private long created;
     //
     private long updated;
+    private String firstLetter;
 
-    public Chat(String title, String lastMessage, long updated) {
+    public Chat(String title, String lastMessage) {
         this.title = title;
         this.lastMessage = lastMessage;
         this.updated = DateUtil.now();
@@ -32,5 +33,9 @@ public class Chat{
 
     public long getUpdated() {
         return updated;
+    }
+
+    public String getFirstLetter() {
+        return firstLetter;
     }
 }
