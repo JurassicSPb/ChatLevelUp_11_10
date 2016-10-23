@@ -4,18 +4,24 @@ package com.github.jurassicspb.chatlevelup_11_10;
  * Created by Мария on 22.10.2016.
  */
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 public class LifeCycleActivity extends AppCompatActivity {
+    public static final String EXTRA_TEST = LifeCycleActivity.class.getName() + "extra_test";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activiy_test_relative);
+        setContentView(R.layout.activity_test_relative);
         Log.d(LifeCycleActivity.class.getSimpleName(), "onCreate");
+
+        Intent i = getIntent();
+        String arg = i.getStringExtra(EXTRA_TEST);
+        Log.d(LifeCycleActivity.class.getSimpleName(), arg);
     }
 
     @Override

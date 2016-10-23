@@ -18,20 +18,23 @@ import android.widget.TextView;
 public class ProfileActivity extends AppCompatActivity{
     private ImageView view;
     private Button logout;
-    private TextView colorTop;
-    private EditText colorRight;
-    private TextView colorBottom;
+    private EditText info1;
+    private EditText info2;
+    private EditText info3;
+    private TextView name;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_activity);
         view = (ImageView) findViewById(R.id.profile_photo);
-        view.setImageResource(R.drawable.blank_profile);
+        view.setImageResource(R.drawable.photo_small);
         logout = (Button) findViewById(R.id.logout);
-        colorTop = (TextView) findViewById(R.id.color_top);
-        colorRight = (EditText) findViewById(R.id.color_right);
-        colorBottom = (TextView) findViewById(R.id.color_bottom);
+        info1 = (EditText) findViewById(R.id.info1);
+        info2 = (EditText) findViewById(R.id.info2);
+        info3 = (EditText) findViewById(R.id.info3);
+        name = (TextView) findViewById(R.id.name);
+
         Intent i = getIntent();
 //        String arg  = i.getStringExtra("key_extra");
 //        Log.d(RegisterActivity.class.getSimpleName(), arg);

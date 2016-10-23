@@ -7,10 +7,12 @@ package com.github.jurassicspb.chatlevelup_11_10;
 public class User {
     private String name;
     private String description;
+    private String firstLetter;
 
-    public User(String name, String description) {
+    public User(String name, String description, String firstLetter) {
         this.name = name;
         this.description=description;
+        this.firstLetter=firstLetter;
     }
     public String getName() {
         return name;
@@ -18,5 +20,9 @@ public class User {
 
     public String getDescription() {
         return description;
+    }
+
+    public String getFirstLetter() {
+        return firstLetter;
     }
 }
