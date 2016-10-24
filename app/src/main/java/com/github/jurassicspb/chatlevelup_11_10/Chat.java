@@ -42,10 +42,10 @@ public class Chat implements Comparable<Chat>{
     @Override
     public int compareTo(Chat object) {
         if ((Long) this.getUpdated() < (Long) object.getUpdated())
-            return -1;
+            return 1;
         if (this.getUpdated() == object.getUpdated())
             return 0;
 
-        return 1;
+        return -1;
     }
 }
