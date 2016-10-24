@@ -14,9 +14,12 @@ public class DateUtil {
         return new Date().getTime();
     }
 
+//    public static String fromTs(long ts) {
+//        SimpleDateFormat dateFormat = new SimpleDateFormat(PATTERN);
+//        return dateFormat.format(new Date(ts));
+//    }
     public static String fromTs(long ts) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat(PATTERN);
-        return dateFormat.format(new Date(ts));
+        return String.valueOf(Math.random()*100);
     }
 
 }

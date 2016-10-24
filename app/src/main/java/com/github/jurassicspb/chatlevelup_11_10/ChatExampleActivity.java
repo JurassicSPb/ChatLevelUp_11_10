@@ -32,7 +32,7 @@ public class ChatExampleActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.chat_list_example);
+        setContentView(R.layout.activity_list_example);
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -45,10 +45,12 @@ public class ChatExampleActivity extends AppCompatActivity {
 
         adapter = new ChatExampleAdapter(chats, clickListener);
         recyclerView.setAdapter(adapter);
+        Log.d(ChatExampleActivity.class.getSimpleName(), "onCreate");
     }
 
     public void onListChanged(int position) {
         adapter.notifyDataSetChanged();
+        Log.d(ChatExampleActivity.class.getSimpleName(), "onListChanged");
     }
 
     @Override
@@ -59,7 +61,8 @@ public class ChatExampleActivity extends AppCompatActivity {
             @Override
             public void run() {
                 while (visible) {
-                    chats.add(new Chat(("Title " + chats.size()), "Last Message"));
+                    chats.add(new Chat(("Title " + chats.size()), "Last Message", "T"));
+                    Collections.sort(chats);
                     handler.post(new Runnable() {
                         @Override
                         public void run() {
@@ -74,11 +77,13 @@ public class ChatExampleActivity extends AppCompatActivity {
                 }
             }
         }).start();
+        Log.d(ChatExampleActivity.class.getSimpleName(), "onStart");
     }
 
     @Override
     protected void onStop() {
         visible = false;
         super.onStop();
+        Log.d(ChatExampleActivity.class.getSimpleName(), "onStop");
     }
 }
