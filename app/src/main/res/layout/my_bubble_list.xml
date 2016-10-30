@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16sp">
+
+    <TextView
+        android:id="@+id/myself"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MyBubble"
+        android:padding="24dp"
+        android:textSize="20sp"
+        android:background="@drawable/bubble_my"
+        android:textColor="@color/myText"
+        android:maxWidth="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/created"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Created"
+        android:textSize="14sp"
+        android:layout_marginTop="28dp"
+        android:textColor="@android:color/black"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@+id/myself"
+        android:layout_toStartOf="@+id/myself" />
+
+
+</RelativeLayout>

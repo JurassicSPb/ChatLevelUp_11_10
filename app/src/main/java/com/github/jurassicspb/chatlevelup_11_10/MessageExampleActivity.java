@@ -8,74 +8,82 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
-public class ListExampleActivity extends AppCompatActivity {
+public class MessageExampleActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
-    private ListExampleAdapter adapter;
-    private ArrayList<User> users;
+    private Button send;
+    private MessageExampleAdapter adapter;
+    private ArrayList<Message> messages;
     private Handler handler = new Handler();
     private boolean visible = false;
 
     private OnListItemClickListener clickListener = new OnListItemClickListener() {
         @Override
         public void onClick(View v, int position) {
-            Log.d(ListExampleAdapter.class.getSimpleName(), "Clicked pos: " + position);
-            Toast.makeText(ListExampleActivity.this, "Clicked " + position, Toast.LENGTH_SHORT).show();
+            Log.d(ChatExampleAdapter.class.getSimpleName(), "Clicked pos: " + position);
+            Toast.makeText(MessageExampleActivity.this, "Clicked " + position, Toast.LENGTH_SHORT).show();
         }
     };
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_example);
-
+        setContentView(R.layout.message_list_example);
+        Log.d(MessageExampleActivity.class.getSimpleName(), "onCreate");
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        send = (Button) findViewById(R.id.send);
 
-        users = new ArrayList<>();
+        messages = new ArrayList<>();
 //		for (int i = 0; i < ; i++) {
 //			users.add(new User("User " + i));
 //		}
 
-        adapter = new ListExampleAdapter(users, clickListener);
+        adapter = new MessageExampleAdapter(messages, clickListener);
         recyclerView.setAdapter(adapter);
+
+        send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
     }
 
     public void onListChanged(int position) {
         adapter.notifyDataSetChanged();
+        Log.d(MessageExampleActivity.class.getSimpleName(), "onListChanged");
     }
+
 
     @Override
     protected void onStart() {
         super.onStart();
         visible = true;
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                while (visible) {
-                    users.add(new User(("User " + users.size()), "Description", "U"));
-                    handler.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            onListChanged(users.size() - 1);
-                        }
-                    });
-                    try {
-                        Thread.sleep(3000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+        new Thread(() -> {
+            while (visible) {
+                messages.add(new Message(""));
+                handler.post(() -> onListChanged(messages.size() - 1));
+                try {
+                    Thread.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
             }
         }).start();
+        Log.d(MessageExampleActivity.class.getSimpleName(), "onStart");
     }
 
     @Override
     protected void onStop() {
         visible = false;
         super.onStop();
+        Log.d(MessageExampleActivity.class.getSimpleName(), "onStop");
     }
 }

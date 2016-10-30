@@ -8,20 +8,20 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import java.util.List;
 
-public class ListExampleAdapter extends RecyclerView.Adapter<ListExampleAdapter.ViewHolder> {
-    private ArrayList<User> users;
+public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ViewHolder> {
+    private List<User> users;
     private OnListItemClickListener clickListener;
 
-    public ListExampleAdapter(ArrayList<User> users, OnListItemClickListener clickListener) {
+    public UserListAdapter(List<User> users, OnListItemClickListener clickListener) {
         this.users = users;
         this.clickListener = clickListener;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_example, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.user_list_example, parent, false);
         return new ViewHolder(v);
     }
 

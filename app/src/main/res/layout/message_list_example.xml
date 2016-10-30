@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@android:color/white"
+        app:title="@string/app_name"/>
+
+    <EditText
+    android:id="@+id/message_field"
+    android:layout_width="match_parent"
+    android:layout_marginRight="72dp"
+    android:layout_height="52dp"
+    android:layout_gravity="bottom"
+    android:background="@color/colorSecondaryBackground"
+    android:inputType="textMultiLine"
+    android:ems="10"
+    android:textSize="19sp"
+    android:textColor="@color/colorMainText"
+    android:hint="@string/input_message"
+    android:textColorHint="@color/colorHintText"
+    android:textCursorDrawable="@color/colorCursorText"
+    android:paddingLeft="8dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:text="@string/send"
+        android:id="@+id/send"
+        android:textSize="16sp"
+        android:layout_gravity="bottom|right"
+        android:background="@color/sendButton"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="52dp"/>
+
+</FrameLayout>

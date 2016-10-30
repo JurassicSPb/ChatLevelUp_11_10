@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16sp">
+
+    <TextView
+        android:id="@+id/buddy"
+        android:padding="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/buddyText"
+        android:text="MyBubble"
+        android:maxWidth="200dp"
+        android:textSize="20sp"
+        android:layout_gravity="left"
+        android:background="@drawable/bubble_buddy"/>
+
+    <TextView
+        android:id="@+id/created"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Created"
+        android:layout_marginTop="28dp"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/buddy"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="16dp"/>
+
+
+</RelativeLayout>

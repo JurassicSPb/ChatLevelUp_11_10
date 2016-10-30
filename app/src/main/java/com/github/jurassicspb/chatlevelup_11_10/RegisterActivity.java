@@ -50,7 +50,7 @@ public class RegisterActivity extends AppCompatActivity {
             ToastResult(R.string.register_failed2);
         } else {
             ToastResult(R.string.register_success);
-            Intent intent = new Intent(this, ProfileActivity.class);
+            Intent intent = new Intent(this, ProfileActivity2.class);
             intent.putExtra("key_extra", "value");
             startActivity(intent);
         }

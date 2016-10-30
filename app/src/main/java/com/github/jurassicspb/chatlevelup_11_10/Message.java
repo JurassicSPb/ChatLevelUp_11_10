@@ -13,4 +13,26 @@ public class Message {
     private long created;
     //
     private String body;
+
+    public Message(String body) {
+        this.body = body;
+        created = DateUtil.now();
+    }
+
+    public String getSender() {
+
+        return sender;
+    }
+
+    public void setSender(String sender) {
+        this.sender = sender;
+    }
+
+    public long getCreated() {
+        return created;
+    }
+
+    public String getBody() {
+        return body;
+    }
 }
