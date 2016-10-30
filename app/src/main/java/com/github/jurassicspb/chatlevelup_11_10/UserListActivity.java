@@ -64,7 +64,7 @@ public class UserListActivity extends AppCompatActivity {
     private  void createFakeUsers(){
         ArrayList<User> newUsers = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            newUsers.add(new User(String.valueOf(i), "User " + i));
+            newUsers.add(new User(String.valueOf(i), "User " + i, "U"));
         }
         userDB.copyOrUpdate(newUsers);
 //		new UserDatabase()
@@ -93,22 +93,19 @@ public class UserListActivity extends AppCompatActivity {
         super.onStart();
         visible = true;
         Log.d(UserListActivity.class.getSimpleName(), "onStart");
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                UserDatabase secondRealmInstance = new UserDatabase();
-                while (visible) {
-                    secondRealmInstance.copyOrUpdate(new User(UUID.randomUUID().toString(),
-                            "User " + (int) (Math.random() * 1000)));
+        new Thread(() -> {
+            UserDatabase secondRealmInstance = new UserDatabase();
+            while (visible) {
+                secondRealmInstance.copyOrUpdate(new User(UUID.randomUUID().toString(),
+                        ("User " + (int) (Math.random() * 1000)), "U"));
 //					users.get(0); //ОШИБКА
-                    try {
-                        Thread.sleep(3000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
-                secondRealmInstance.close();
             }
+            secondRealmInstance.close();
         }).start();
     }
 

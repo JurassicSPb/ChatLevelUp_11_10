@@ -18,16 +18,17 @@ public class User extends RealmObject{
     public User() {
     }
 
-    public User(String id, String name) {
+    public User(String id, String name, String firstLetter) {
         this.id = id;
         this.name = name;
-    }
-
-    public User(String name, String description, String firstLetter) {
-        this.name = name;
-        this.description=description;
         this.firstLetter=firstLetter;
     }
+
+//    public User(String name, String description, String firstLetter) {
+//        this.name = name;
+//        this.description=description;
+//        this.firstLetter=firstLetter;
+//    }
 
     public String getId() {
         return id;
