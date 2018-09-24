@@ -8,8 +8,7 @@ public class Chat implements Comparable<Chat>{
     private String id;
     //
     private String title;
-    private String author;
-    private String[] participants;
+    private String participant;
     //
     private String lastMessage;
     private long created;

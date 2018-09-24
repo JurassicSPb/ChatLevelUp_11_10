@@ -30,12 +30,7 @@ public class TestActivity extends AppCompatActivity{
         editPassword = (EditText) findViewById(R.id.password);
 
 
-        buttonSI.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onButtonSIClicked();
-            }
-        });
+        buttonSI.setOnClickListener(v -> onButtonSIClicked());
     }
             private void onButtonSIClicked(){
             if (editEmail.getText().length()==0 || editPassword.getText().length()==0) {

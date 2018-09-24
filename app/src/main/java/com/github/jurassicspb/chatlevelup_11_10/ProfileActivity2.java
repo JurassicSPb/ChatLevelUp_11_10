@@ -35,6 +35,7 @@ public class ProfileActivity2 extends AppCompatActivity{
         info3 = (EditText) findViewById(R.id.info3);
         name = (TextView) findViewById(R.id.name);
 
+
         Intent i = getIntent();
 //        String arg  = i.getStringExtra("key_extra");
 //        Log.d(RegisterActivity.class.getSimpleName(), arg);

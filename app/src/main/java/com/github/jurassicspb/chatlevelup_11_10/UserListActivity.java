@@ -8,7 +8,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.View;
 import android.widget.Toast;
 
 import com.github.jurassicspb.chatlevelup_11_10.storage.UserDatabase;
@@ -28,12 +27,9 @@ public class UserListActivity extends AppCompatActivity {
     private boolean visible = false;
     private UserDatabase userDB;
 
-    private OnListItemClickListener clickListener = new OnListItemClickListener() {
-        @Override
-        public void onClick(View v, int position) {
-            Log.d(UserListAdapter.class.getSimpleName(), "Clicked pos: " + position);
-            Toast.makeText(UserListActivity.this, "Clicked " + position, Toast.LENGTH_SHORT).show();
-        }
+    private OnListItemClickListener clickListener = (v, position) -> {
+        Log.d(UserListAdapter.class.getSimpleName(), "Clicked pos: " + position);
+        Toast.makeText(UserListActivity.this, "Clicked " + position, Toast.LENGTH_SHORT).show();
     };
 
     @Override

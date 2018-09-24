@@ -1,6 +1,5 @@
 package com.github.jurassicspb.chatlevelup_11_10;
 
-
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;

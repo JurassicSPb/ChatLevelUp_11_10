@@ -71,7 +71,7 @@ public class MessageExampleAdapter extends RecyclerView.Adapter<MessageExampleAd
 
 
         public void bind(Message message) {
-            myself.setText("aaafffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffaaaaa");
+            myself.setText("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
             created.setText(DateUtil.fromTs(message.getCreated()));
 
         }
